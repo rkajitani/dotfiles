@@ -1,9 +1,3 @@
-#
-# .zshrc is sourced in interactive shells.
-# It should contain commands to set up aliases,
-# functions, options, key bindings, etc.
-#
-
 #autoload -U compinit
 #compinit
 
@@ -45,26 +39,7 @@ setopt auto_cd
 setopt EXTENDED_GLOB
 setopt no_beep
 
-export PATH=/opt/homebrew/bin:$HOME/bin:$PATH
-export PERL5LIB=$PERL5LIB:$HOME/lib/perl5
+export PATH=$HOME/bin:$PATH
 export LANG=en_US.UTF-8
 
 alias ls='ls -G'
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/kajitani/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/kajitani/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/kajitani/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/kajitani/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home
-export PATH=$JAVA_HOME/bin:$PATH

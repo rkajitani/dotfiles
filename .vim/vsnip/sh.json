@@ -1,0 +1,18 @@
+{
+    "scratch_work": {
+        "prefix": ["scratch_work"],
+        "body": [
+            "base_dir=\\$PWD",
+            "work_dir=/scratch/kajitani/\\$\\$",
+            "mkdir -p \\$work_dir",
+            "cd \\$work_dir",
+            "",
+            "$0",
+            "",
+            "cd \\$base_dir",
+            "mv \\$work_dir/* .",
+            "rm -r \\$work_dir"
+        ],
+        "description": "Shellscript template for temporary workspace in the /scratch directory."
+    }
+}

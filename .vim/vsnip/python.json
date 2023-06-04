@@ -1,0 +1,60 @@
+{
+    "main": {
+        "prefix": ["main"],
+        "body": [
+            "#!/usr/bin/env python",
+            "",
+            "import $0",
+            "",
+            "def main(args):",
+            "",
+            "",
+            "if __name__ == \"__main__\":",
+            "    main()"
+        ],
+        "description": "Python main function template."
+    },
+
+    "argparse": {
+        "prefix": ["argparse"],
+        "body": [
+            "#!/usr/bin/env python",
+            "",
+            "import argparse",
+            "",
+            "parser = argparse.ArgumentParser(description=\"$0\", formatter_class=argparse.MetavarTypeHelpFormatter)",
+            "",
+            "parser.add_argument(\"\", type=str, help=\"\")",
+            "parser.add_argument(\"-\", \"--\", type=str, help=\"\")",
+            "",
+            "args = parser.parse_args()",
+            ""
+        ],
+        "description": "Python argparse template."
+    },
+
+    "argshort": {
+        "prefix": ["argshort"],
+        "body": [
+            "#!/usr/bin/env python",
+            "",
+            "import sys",
+            "",
+            "if len(sys.argv) != $1:",
+            "    print(\"usage:\", sys.argv[0], \"$0\", file=sys.stderr)",
+            "    sys.exit(1)",
+            ""
+        ],
+        "description": "Python short argument template."
+    },
+
+    "readtsv": {
+        "prefix": ["readtsv"],
+        "body": [
+            "with open($0) as fin:",
+            "    for ln in fin:",
+            "        f = ln.rstrip(\"\\n\").split(\"\\t\")"
+        ],
+        "description": "Python template to open, read, and split a TSV file."
+    }
+}
